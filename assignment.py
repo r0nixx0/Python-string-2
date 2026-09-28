@@ -8,11 +8,12 @@ def is_valid_email(text):
             r+=1
         if char=='.':
             r+=1
-    if r==2:
+    if r==2 or r>2:
         return "Valid"
-    if r==0:
+    if r==0 or r==1:
         return "Invalid"
     pass
+
 # Exercise 2
 def remove_vowels(text):
     r="aeouiAEOUI"
