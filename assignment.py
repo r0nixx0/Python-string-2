@@ -53,8 +53,8 @@ def is_palindrome(text):
     text=text.lower()
     r=text[::-1]
     if text==r:
-        return "True"
+        return True
     else:
-        return "False"
+        return False
     pass
 print(is_palindrome("Hello World"))
