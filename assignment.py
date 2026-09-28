@@ -41,7 +41,10 @@ def extract_year(text):
     for char in text:
         if char in l:
             r=r+char
-    return r
+    if len(r) == 4:
+        return r
+
+    return False
     pass
 
 # Exercise 5
