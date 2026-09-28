@@ -27,15 +27,31 @@ def remove_vowels(text):
 
 # Exercise 3
 def get_initials(text):
-
+    words = text.split()
+    r=""
+    for word in words:
+        r+=word[0].upper()+"."
+    return r
     pass
 
 # Exercise 4
 def extract_year(text):
-    # Write your code here
+    r=""
+    l='0123456789'
+    for char in text:
+        if char in l:
+            r=r+char
+    return r
     pass
 
 # Exercise 5
 def is_palindrome(text):
-    # Write your code here
+    text=text.replace(' ','')
+    text=text.lower()
+    r=text[::-1]
+    if text==r:
+        return "True"
+    else:
+        return "False"
     pass
+print(is_palindrome("Hello World"))
